@@ -32,6 +32,14 @@ def fibo_seq(n):
     print()
 
 
+def generar_secuencia(n):
+    if n == 0:
+        return []
+    secuencia_anterior = generar_secuencia(n-1)
+    nueva_secuencia = secuencia_anterior + [n]
+    return nueva_secuencia
+
+
 num_list = [2, 7, 11, 15]
 target_value = 9
 
@@ -40,7 +48,10 @@ def main():
     # print(sum_natural(4))
     # print(factorial(5))
     # print(fibo_numb(6))
-    fibo_seq(6)
+    # fibo_seq(6)
+    # Ejemplo de uso de la función
+    resultado = generar_secuencia(5)
+    print(resultado)  # [1, 2, 3, 4, 5]
 
 
 if __name__ == "__main__":
